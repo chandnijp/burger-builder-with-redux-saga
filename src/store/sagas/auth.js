@@ -24,10 +24,10 @@ export function* authUserSaga(action) {
     returnSecureToken: true
   };
   let url =
-    "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDL0T1YDmAk8JLyHdGfhz7Y9lk7UlcpYbw";
+    "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API KEY]";
   if (!action.isSignup) {
     url =
-      "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDL0T1YDmAk8JLyHdGfhz7Y9lk7UlcpYbw";
+      "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API KEY]";
   }
   try {
     const response = yield axios.post(url, authData);
